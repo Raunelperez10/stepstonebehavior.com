@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stepstone Behavior</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+  <header class="mobile-header">
+  <div class="logo-text-container">
+    <img src="images/new_logo.JPG" alt="Stepstone Logo" class="circle-img" />
+    <h1 class="site-title">
+      <div class="line1">Stepstone</div> 
+      <div class="line2">Behavior Support Corp</div>
+    </h1>
+  </div>
+  <button class="hamburger" onclick="openMobileMenu()">☰</button>
+</header>
+
+<!-- Mobile Menu Drawer -->
+<div class="mobile-drawer" id="mobile-menu">
+  <div class="mobile-drawer-header">
+    <button class="close-btn" onclick="closeMobileMenu()">×</button>
+  </div>
+
+  <ul class="mobile-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="request.html">Request</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+
+  <div class="appointment-footer">
+    <div class="mobile-instagram">
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="images/instagram.svg" alt="Instagram" class="instagram-icon" />
+      </a>
+    </div>
+
+    <a href="tel:5617866295" class="appointments-btn">Appointments: 561-786-6295</a>
+  </div>
+</div>
+
+
+<!-- SERVICES PAGE -->
+<section class="services-section">
+  <h2 class="services-title">Our ABA Services</h2>
+
+  <div class="service-item">
+    <h3>🔹 1-on-1 ABA Therapy</h3>
+    <p>At StepStone, we provide personalized, one-on-one ABA therapy sessions that help children build essential life skills at their own pace. Each session is tailored to meet the child’s unique strengths and challenges.</p>
+  </div>
+
+  <div class="service-item">
+    <h3>🔹 Parent Training & Support</h3>
+    <p>We believe parents are key to a child’s success. Our team works closely with families, providing tools and guidance to help you support your child’s progress at home and beyond.</p>
+  </div>
+
+  <div class="service-item">
+    <h3>🔹 School Readiness Programs</h3>
+    <p>StepStone prepares children for school success by helping them develop focus, routines, and positive behaviors in a structured, supportive setting. We aim to build confidence in every child.</p>
+  </div>
+
+  <div class="service-item">
+    <h3>🔹 Behavior Intervention Plans</h3>
+    <p>Our experienced team creates custom behavior plans that address challenging behaviors and teach positive alternatives. We focus on progress that lasts.</p>
+  </div>
+
+  <div class="service-item">
+    <h3>🔹 Social Skills Development</h3>
+    <p>We offer social skills training to help children learn how to communicate, play, and build relationships with others. Group sessions are guided by our caring professionals in a fun and safe environment.</p>
+  </div>
+
+  <div class="service-item">
+    <h3>🔹 In-home & Community-Based Support</h3>
+    <p>For families who need flexibility, we bring ABA services to you. Our therapists can work with your child at home or in familiar settings where real growth happens.</p>
+  </div>
+
+  <div class="consult-cta">
+    <h3>🟣 Ready to get started?</h3>
+    <p>Let’s talk about how StepStone can support your family.</p>
+    <a href="request.html" class="consult-link">Request a Consultation</a>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-top">
+    <img src="images/new_logo.JPG" alt="Stepstone Logo" class="footer-logo" />
+    <p class="footer-contact-title">Get in Touch</p>
+    <p class="footer-contact-info">561-786-6295</p>
+    <p class="footer-contact-info">stepstonebehavior@gmail.com</p>
+
+    <p class="footer-contact-title">Visit Us</p>
+    <p class="footer-contact-info">4623 Forest Hill Blvd, Suite 113,<br>West Palm Beach, FL 33415</p>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-column">
+      <h4>Social</h4>
+      <ul><li><a href="#">Instagram</a></li></ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Accessibility Statement</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Request</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function openMobileMenu() {
+    document.getElementById('mobile-menu').classList.add('open');
+  }
+
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>   

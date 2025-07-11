@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stepstone Behavior</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+<!-- HEADER -->
+  <header class="mobile-header">
+  <div class="logo-text-container">
+    <img src="images/new_logo.JPG" alt="Stepstone Logo" class="circle-img" />
+    <h1 class="site-title">
+      <div class="line1">Stepstone</div> 
+      <div class="line2">Behavior Support Corp</div>
+    </h1>
+  </div>
+  <button class="hamburger" onclick="openMobileMenu()">☰</button>
+</header>
+
+<!-- Mobile Menu Drawer -->
+<div class="mobile-drawer" id="mobile-menu">
+  <div class="mobile-drawer-header">
+    <button class="close-btn" onclick="closeMobileMenu()">×</button>
+  </div>
+
+  <ul class="mobile-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="request.html">Request</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+
+  <div class="appointment-footer">
+    <div class="mobile-instagram">
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="images/instagram.svg" alt="Instagram" class="instagram-icon" />
+      </a>
+    </div>
+
+    <a href="tel:5617866295" class="appointments-btn">Appointments: 561-786-6295</a>
+  </div>
+</div>
+
+<!-- first section -->
+ <section class="request-header">
+  <h1>Request Services</h1>
+  <p>Please fill out the form below to request ABA therapy or other support services. We’ll get back to you as soon as possible!</p>
+</section>
+
+<!-- Request Form Section -->
+ <section class="request-form-section">
+  <form class="request-form" action="#" method="post">
+    <label for="name">Parent/Guardian Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="child-name">Child's Name</label>
+    <input type="text" id="child-name" name="child-name" required>
+
+    <label for="age">Child's Age</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="services">What services are you interested in?</label>
+    <textarea id="services" name="services" rows="4" placeholder="Describe your request..."></textarea>
+
+    <button type="submit" class="submit-button">Submit Request</button>
+  </form>
+</section>
+
+<!-- what happens next -->
+
+<section class="what-next">
+  <h2>What Happens Next?</h2>
+  <div class="next-steps">
+    <div class="step">
+      <span class="step-number">1</span>
+      <p>Our team will review your request and contact you within 1–2 business days.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">2</span>
+      <p>We’ll schedule a short phone call to learn more about your child’s needs and goals.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">3</span>
+      <p>We’ll help you take the next steps—whether it’s an assessment, therapy plan, or just questions answered.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-top">
+    <img src="images/new_logo.JPG" alt="Stepstone Logo" class="footer-logo" />
+    <p class="footer-contact-title">Get in Touch</p>
+    <p class="footer-contact-info">561-786-6295</p>
+    <p class="footer-contact-info">stepstonebehavior@gmail.com</p>
+
+    <p class="footer-contact-title">Visit Us</p>
+    <p class="footer-contact-info">4623 Forest Hill Blvd, Suite 113,<br>West Palm Beach, FL 33415</p>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-column">
+      <h4>Social</h4>
+      <ul><li><a href="#">Instagram</a></li></ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Accessibility Statement</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Request</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  function openMobileMenu() {
+    document.getElementById('mobile-menu').classList.add('open');
+  }
+
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+  }
+</script>
+
+</body>
+</html>    

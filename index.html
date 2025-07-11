@@ -1,249 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StepStone Behavior</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stepstone Behavior</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <!-- ========== TOP BAR ========== -->
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <div class="top-bar-message">
-          <div class="message active">West Palm Beach, FL</div>
-          <div class="message">Mon–Fri: 9:00am – 5:00pm</div>
-        </div>
-      </div>
-      <div class="top-bar-right">
-        <span class="email-link">
-          <a href="mailto:stepstonebehavior@gmail.com">
-            <img src="images/email_icon.png" alt="Email Icon" class="email_icon" />
-          </a>
-          stepstonebehavior@gmail.com
-        </span>
-      </div>
-    </div>
+  <!-- HEADER -->
+  <header class="mobile-header">
+  <div class="logo-text-container">
+    <img src="images/new_logo.JPG" alt="Stepstone Logo" class="circle-img" />
+    <h1 class="site-title">
+      <div class="line1">Stepstone</div> 
+      <div class="line2">Behavior Support Corp</div>
+    </h1>
+  </div>
+  <button class="hamburger" onclick="openMobileMenu()">☰</button>
+</header>
 
-    <!-- ========== HEADER ========== -->
-<header>
-  <div class="header-content">
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="images/logo-stepstone-transparent.png" alt="StepStone Behavior logo" class="logo" />
+<!-- Mobile Menu Drawer -->
+<div class="mobile-drawer" id="mobile-menu">
+  <div class="mobile-drawer-header">
+    <button class="close-btn" onclick="closeMobileMenu()">×</button>
+  </div>
+
+  <ul class="mobile-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="request.html">Request</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+
+  <div class="appointment-footer">
+    <div class="mobile-instagram">
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="images/instagram.svg" alt="Instagram" class="instagram-icon" />
       </a>
     </div>
 
-    <!-- Desktop nav -->
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
+    <a href="tel:5617866295" class="appointments-btn">Appointments: 561-786-6295</a>
+  </div>
+</div>
+
+
+
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="images/Services-1.jpg" alt="Therapist with child" class="hero-img">
+  </section>
+
+  <section class="hero-text">
+    <h1 class="hero-title">
+  <span class="line1">A Better Future For Your</span><br>
+  <span class="line2">Kids.</span>
+</h1>
+    <div class="hero-buttons">
+      <a href="#" class="hero-btn">Request Service</a>
+      <a href="#" class="hero-btn">Join Our Team</a>
+    </div>
+  </section>
+
+
+<section class="about-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>We’re dedicated to you</h2>
+      <p>
+        At StepStone Behavior Support Corp, we believe every child deserves the opportunity to grow, communicate, and thrive. 
+        We provide quality ABA therapy for children with autism and developmental challenges.
+      </p>
+      <p>
+        Our team of certified professionals uses compassionate, individualized care to help children build new skills, reduce 
+        challenging behaviors, and reach meaningful milestones. We partner with families every step of the way.
+      </p>
+    </div>
+
+    <div class="about-images">
+      <img src="images/image1.PNG" alt="Therapist and child" />
+      <img src="images/image2.PNG" alt="Happy children in therapy" />
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="aba-benefits">
+  <img src="images/benefits_section.jpg" alt="ABA Therapy Graphic" class="aba-img" />
+
+  <div class="aba-text">
+    <h3><strong>Focuses on the Individual</strong></h3>
+    <p>
+      ABA therapy at Stepstone is personalized and centered on each person’s unique needs.
+      We start by understanding where you are and help you reach new milestones step by step.
+    </p>
+
+    <h3><strong>Develops Essential Life Skills</strong></h3>
+    <p>
+      ABA therapy builds practical skills, including communication, social interaction, self-care, and
+      problem-solving, setting the stage for greater independence and success.
+    </p>
+
+    <h3><strong>Builds Confidence</strong></h3>
+    <p>
+      Each skill gained through ABA brings more than progress—it creates lasting confidence and motivation
+      for individuals and their families.
+    </p>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="reviews-header">
+    <span class="reviews-tag">Reviews</span>
+    <h2>What our patients say about us</h2>
+  </div>
+
+  <div class="reviews-grid">
+    <blockquote>
+      “Since starting ABA therapy at Stepstone, my child has made incredible progress in communication. We’re finally able to connect in ways we never thought possible.”
+      <br><span class="author">— Maria T., parent</span>
+    </blockquote>
+
+    <blockquote>
+      “ABA therapy helped my son build structure and routines. His independence has grown so much—it’s life-changing for our family.”
+      <br><span class="author">— Jacob R., parent</span>
+    </blockquote>
+
+    <blockquote>
+      “The therapists truly care and explain every step of the ABA process. I’ve seen such positive behavior changes in my daughter since starting therapy here.”
+      <br><span class="author">— Naomi S., parent</span>
+    </blockquote>
+  </div>
+</section>
+
+
+<section class="contact-section">
+  <div class="contact-image">
+    <img src="images/contact_image.jpg" alt="Child in therapy session" />
+  </div>
+
+  <div class="contact-form">
+    <h2>Contact Us</h2>
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first-name">First Name *</label>
+          <input type="text" id="first-name" required />
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name *</label>
+          <input type="text" id="last-name" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" />
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="message">Message</label>
+        <textarea id="message" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+</section>
+
+<section class="aba-info-image">
+  <img src="images/after_contact.jpg" alt="ABA Therapy Note Image" class="info-img" />
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-top">
+    <img src="images/new_logo.JPG" alt="Stepstone Logo" class="footer-logo" />
+    <p class="footer-contact-title">Get in Touch</p>
+    <p class="footer-contact-info">561-786-6295</p>
+    <p class="footer-contact-info">stepstonebehavior@gmail.com</p>
+
+    <p class="footer-contact-title">Visit Us</p>
+    <p class="footer-contact-info">4623 Forest Hill Blvd, Suite 113,<br>West Palm Beach, FL 33415</p>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-column">
+      <h4>Social</h4>
+      <ul><li><a href="#">Instagram</a></li></ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Accessibility Statement</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Links</h4>
+      <ul>
         <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">Services</a></li>
         <li><a href="#">Career</a></li>
         <li><a href="#">Request</a></li>
         <li><a href="#">Gallery</a></li>
       </ul>
-    </nav>
-
-    <div class="social-icons desktop-only">
-  <a href="#"><img src="images/facebook_logo_icon.png" alt="Facebook" /></a>
-  <a href="#"><img src="images/instagram_icon.svg" alt="Instagram" /></a>
-</div>
-
-
-     <!-- Hamburger wrapper -->
-    <div class="nav-right">
-      <button id="menu-toggle" class="hamburger" aria-controls="mobile-menu" aria-expanded="false">&#9776;</button>
     </div>
-
-   <!-- Mobile Drawer Menu -->
-<nav class="mobile-drawer" id="mobile-menu">
-  <ul class="drawer-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">Career</a></li>
-    <li><a href="#">Request</a></li>
-    <li><a href="#">Gallery</a></li>
-  </ul>
-  <div class="mobile-extras">
-    <div class="social-icons">
-      <a href="#"><img src="images/facebook_logo_icon.png" alt="Facebook" /></a>
-      <a href="#"><img src="images/instagram_icon.svg" alt="Instagram" /></a>
-    </div>
-    <div class="email-link">📧 stepstonebehavior@gmail.com</div>
-    <a href="#" class="cta-button">I want a consultation</a>
   </div>
-</nav>
+</footer>
 
+<script>
+  function openMobileMenu() {
+    document.getElementById('mobile-menu').classList.add('open');
+  }
 
-    <!-- This button is still visible on desktop -->
-    <a href="#" class="cta-button">I want a consultation</a>
-  </div>
-</header>
-
-
-    <!-- ========== HERO SLIDER ========== -->
-    <section class="hero-slider">
-      <div class="slider">
-        <img src="images/slider_image.webp" alt="Kids Learning" class="slide active" />
-        <img src="images/slider_image2.jpg" alt="Teacher and Student" class="slide" />
-        <img src="images/slider_image3.png" alt="Kids Playing" class="slide" />
-      </div>
-      <div class="hero-overlay">
-        <h1>A Better Future for Your Kids</h1>
-        <div class="hero-buttons">
-          <a href="#" class="hero-btn request-btn">Request Service</a>
-          <a href="#" class="hero-btn join-btn">Join Our Team</a>
-        </div>
-      </div>
-      <div class="hero-curve">
-        <svg viewBox="0 0 1440 120" width="100%" height="120" preserveAspectRatio="none" style="display:block">
-          <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="white" />
-        </svg>
-      </div>
-    </section>
-
-    <!-- ========== INTRO BAR ========== -->
-    <section class="intro-bar">
-      <img src="images/puzzle-logo2.png" alt="ABA Puzzle" class="intro-img" />
-      <span class="intro-text">Dedicated to empowering children through compassionate ABA therapy.</span>
-      <img src="images/puzzle-logo2.png" alt="ABA Puzzle" class="intro-img" />
-    </section>
-
-    <!-- ========== ABA INFO ========== -->
-    <div class="aba-help-text-plain">
-      <h2>How ABA Therapy Can Help Your Child</h2>
-      <p>
-        <strong>Applied Behavior Analysis (ABA)</strong> is an evidence-based approach that focuses on understanding and
-        improving behaviors. ABA therapy helps individuals with autism and developmental challenges learn new skills,
-        build positive habits, and reduce behaviors that get in the way of growth.
-      </p>
-    </div>
-
-    <!-- ========== ABA BENEFITS ========== -->
-    <div class="aba-benefits-row">
-      <div class="aba-benefit">
-        <h3>Focuses on the Individual</h3>
-        <p>
-          ABA therapy at Stepstone is personalized and centered on each person’s unique needs. We start by understanding
-          where you are and help you reach new milestones step by step.
-        </p>
-      </div>
-      <div class="aba-benefit">
-        <h3>Develops Essential Life Skills</h3>
-        <p>
-          ABA therapy builds practical skills, including communication, social interaction, self-care, and
-          problem-solving, setting the stage for greater independence and success.
-        </p>
-      </div>
-      <div class="aba-benefit">
-        <h3>Builds Confidence</h3>
-        <p>
-          Each skill gained through ABA brings more than progress—it creates lasting confidence and motivation for
-          individuals and their families.
-        </p>
-      </div>
-    </div>
-
-    <!-- ========== IMAGE BANNER ========== -->
-    <div class="simple-bottom-banner">
-      <img src="images/image1.PNG" alt="Therapist with Child" class="bottom-img left-img" />
-      <img src="images/logo-stepstone-transparent.png" alt="StepStone Behavior logo" class="bottom-logo" />
-      <img src="images/image2.PNG" alt="Therapist with Girl" class="bottom-img right-img" />
-    </div>
-
-    <!-- ========== INFO BANNER ========== -->
-    <div class="info-banner">
-      <div class="info-flex">
-        <div class="contact-box">
-          <p><strong>Stepstone Behavior Support Corp</strong><br />ABA Agency</p>
-          <p>📧 <a href="mailto:stepstonebehavior@gmail.com">stepstonebehavior@gmail.com</a></p>
-          <p>📍 <a href="https://www.google.com/maps?q=West+Palm+Beach" target="_blank">West Palm Beach</a></p>
-          <p>
-            📞 <a href="tel:3053101624">(305) 310-1624</a> &nbsp;
-            <a href="tel:5617586295">(561) 758-6295</a>
-          </p>
-        </div>
-        <div class="info-columns">
-          <div class="info-col">
-            <h3>COMMUNICATION<br />SKILLS</h3>
-            <p>(Conversation, Social Skills, Reading and Writing, Languages)</p>
-          </div>
-          <div class="info-col">
-            <h3>DAILY LIVING<br />SKILLS</h3>
-            <p>(Dressing, Eating, Fine Motor skills, Personal Self-care, Domestic Skills)</p>
-          </div>
-          <div class="info-col">
-            <h3>PROBLEM<br />BEHAVIORS</h3>
-            <p>(Self-injury, Tantrum, Aggressive Behavior, Self-stimulatory Behavior)</p>
-          </div>
-        </div>
-      </div>
-      <div class="skills-contact-row">
-        <span class="contact-label">Phone:</span> 305-310-1624
-        <span class="contact-label">Email:</span> stepstonebehavior@gmail.com
-        <span class="contact-label">Location:</span> West Palm Beach
-      </div>
-    </div>
-
-    <!-- ========== FOOTER ========== -->
-    <footer>
-      <p>&copy; 2025 StepStone Behavior</p>
-    </footer>
-
-    <!-- ========== SCRIPTS ========== -->
-    <script>
-      let currentSlide = 0;
-      const slides = document.querySelectorAll(".slide");
-
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.remove("active");
-          if (i === index) slide.classList.add("active");
-        });
-      }
-
-      setInterval(() => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }, 4000);
-    </script>
-
-    <script>
-      let msgIndex = 0;
-      const messages = document.querySelectorAll(".top-bar-message .message");
-
-      setInterval(() => {
-        messages[msgIndex].classList.remove("active");
-        msgIndex = (msgIndex + 1) % messages.length;
-        messages[msgIndex].classList.add("active");
-      }, 3000);
-    </script>
-
-    <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  menuToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-  menuToggle.setAttribute(
-    'aria-expanded',
-    mobileMenu.classList.contains('open') ? 'true' : 'false'
-  );
-});
-
-  // Close the mobile menu when clicking outside of it
-  document.addEventListener('click', (event) => {
-    if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-      mobileMenu.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+  }
 </script>
-  </body>
+
+
+</body>
 </html>
+
