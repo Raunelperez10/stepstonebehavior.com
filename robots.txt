@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stepstonebehavior.com/sitemap.xml
