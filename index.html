@@ -40,6 +40,15 @@
 </head>
 <body>
 
+  <!-- Video Intro Overlay -->
+<div id="video-intro">
+  <video autoplay muted playsinline id="intro-video">
+    <source src="images/video_office1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
 <!-- MOBILE HEADER (only visible on mobile) -->
 <header class="mobile-header">
   <div class="logo-text-container">
@@ -321,6 +330,26 @@
     document.getElementById('mobile-menu').classList.remove('open');
   }
 </script>
+
+<script>
+  const intro = document.getElementById("video-intro");
+  const video = document.getElementById("intro-video");
+
+  // Hide intro when video ends
+  video.onended = () => {
+    intro.style.transition = "opacity 1s ease";
+    intro.style.opacity = 0;
+    setTimeout(() => intro.style.display = "none", 1000);
+  };
+
+  // Optional: Skip intro on click/tap
+  intro.addEventListener("click", () => {
+    intro.style.transition = "opacity 1s ease";
+    intro.style.opacity = 0;
+    setTimeout(() => intro.style.display = "none", 1000);
+  });
+</script>
+
 
 
 </body>

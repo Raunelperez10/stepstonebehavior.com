@@ -1250,4 +1250,164 @@ blockquote {
   }
 }
 
+/* ===== GALLERY: MOBILE BASE (2 columns + slide L/R) ===== */
+#office-gallery {
+  padding: 1rem 1rem 2rem;
+}
+
+#office-gallery h2 {
+  font-size: 1.4rem;
+  margin: 0 0 0.75rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+  gap: 10px;
+}
+
+/* Each tile */
+.gallery-item {
+  display: block;
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0;                    /* start hidden */
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Alternate directions */
+.gallery-item:nth-child(odd) {
+  animation: slideInLeft 650ms ease-out forwards;
+}
+.gallery-item:nth-child(even) {
+  animation: slideInRight 650ms ease-out forwards;
+}
+
+/* Staggered delays (first 12 items) */
+.gallery-item:nth-child(1)  { animation-delay: 80ms; }
+.gallery-item:nth-child(2)  { animation-delay: 140ms; }
+.gallery-item:nth-child(3)  { animation-delay: 200ms; }
+.gallery-item:nth-child(4)  { animation-delay: 260ms; }
+.gallery-item:nth-child(5)  { animation-delay: 320ms; }
+.gallery-item:nth-child(6)  { animation-delay: 380ms; }
+.gallery-item:nth-child(7)  { animation-delay: 440ms; }
+.gallery-item:nth-child(8)  { animation-delay: 500ms; }
+.gallery-item:nth-child(9)  { animation-delay: 560ms; }
+.gallery-item:nth-child(10) { animation-delay: 620ms; }
+.gallery-item:nth-child(11) { animation-delay: 680ms; }
+.gallery-item:nth-child(12) { animation-delay: 740ms; }
+
+@keyframes slideInLeft {
+  from { transform: translateX(-18px); opacity: 0; }
+  to   { transform: translateX(0);      opacity: 1; }
+}
+@keyframes slideInRight {
+  from { transform: translateX(18px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+.gallery figure { margin: 0; }
+
+.gallery img {
+  width: 100%;
+  display: block;
+  height: auto;
+  aspect-ratio: 4 / 3;  /* keeps rows even if some photos are taller */
+  object-fit: cover;
+}
+
+/* Optional caption */
+.gallery figcaption {
+  display: block;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.4rem 0 0;
+  color: #333;
+  line-height: 1.2;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ===== GALLERY: DESKTOP (4 columns + hover zoom) ===== */
+@media (min-width: 900px) {
+  #office-gallery {
+    padding: 2rem 2rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #office-gallery h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr); /* 4 per row on desktop */
+    gap: 14px;
+  }
+
+  /* Hover zoom only on devices with a real cursor */
+  @media (hover: hover) and (pointer: fine) {
+    .gallery img {
+      transition: transform 260ms ease, filter 260ms ease;
+      will-change: transform;
+    }
+    .gallery-item:hover img,
+    .gallery-item:focus-visible img {
+      transform: scale(1.06);
+    }
+
+    /* Optional: subtle shadow on hover */
+    .gallery-item {
+      transition: box-shadow 200ms ease;
+    }
+    .gallery-item:hover,
+    .gallery-item:focus-visible {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      outline: none;
+    }
+  }
+}
+
+/* ===== GALLERY PAGE BACKGROUND ===== */
+main {
+  background-color: #f0f8ff; /* Pastel blue background for the gallery section */
+  padding: 2rem; /* Adds space around the gallery items so they don't touch the edges */
+}
+
+
+/* Fullscreen overlay for video intro */
+#video-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+#video-intro video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* default for mobile */
+  background-color: black;
+}
+
+/* On desktop, show the entire video without cropping */
+@media (min-width: 1024px) {
+  #video-intro video {
+    object-fit: contain;
+  }
+}
 
